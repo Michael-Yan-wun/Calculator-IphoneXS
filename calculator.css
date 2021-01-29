@@ -1,0 +1,123 @@
+/* 每個元素都是boder-box的樣式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* 不能匡裡面的元素 */
+    user-select: none;
+}
+
+body {
+    margin: 25px;
+    font-family: "Helvetica", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 193, 199);
+}
+
+p {
+    /* font-weight: 30; */
+    font-size: 130px;
+    font-family: cursive;
+}
+span {
+    color: white;
+}
+
+.calculator {
+    /* 加入posision因為底部的一槓 */
+    position: relative;
+    background: black;
+    color: white;
+    width: 423px;
+    height: 877px;
+    border-radius: 50px;
+    padding: 15px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+    border: 5px solid #dfccb7;
+    /* 整體縮放 */
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+}
+
+.top-container {
+    display: flex;
+    padding: 0 20px;
+    /* space-between */
+    justify-content: space-between;
+    /* 顯示區距離 */
+    height: 250px;
+}
+
+.screenShow {
+    overflow: hidden;
+    font-size: 100px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    height: 110px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* 按鈕css */
+.buttons-container {
+    /* grid控制行與列顯示 */
+    display: grid;
+    /* fr用法： */
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    /* 每個元素之間的空格 */
+    grid-gap: 20px;
+}
+
+.button {
+    height: 75px;
+    width: 75px;
+    font-size: 40px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 滑鼠移過去的樣式 */
+    cursor: pointer;
+    /*  */
+    transition: filter 0.3s;
+}
+
+.button.function {
+    color: black;
+    background: #a5a5a5;
+}
+
+.button.operator {
+    background: #f1a33c;
+}
+/* 數字0的ｃｓｓ */
+.button.number-0 {
+    width: 175px;
+    border-radius: 55px;
+    justify-content: flex-start;
+    padding-left: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* 按下有active屬性並且閃亮一下 */
+.button:active {
+    filter: brightness(150%);
+}
+
+/* 手機下面一槓 */
+.bottom {
+    width: 150px;
+    height: 5px;
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 5px;
+    /* 因為用left會使元素從整個container的50%『開始』，所以用transform:translateX(-50%)向左移動50% */
+    left: 50%;
+    transform: translateX(-50%);
+}
