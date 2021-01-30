@@ -93,7 +93,7 @@ const setStrAsValue = (valueStr) => {
     }
     // 檢視變且修改screenShow顯示區的css
     let screenNumLen = screenShow.textContent.split(",").join("").length;
-    if (screenNumLen > 6 && screenNumLen <= 9) {
+    if (screenNumLen > 5 && screenNumLen <= 9) {
         document.getElementById("screenShow").style = "font-size:60px;";
     } else if (screenNumLen == 10) {
         newStr = document
@@ -119,7 +119,7 @@ const handleNumberClick = (numStr) => {
     }
     //檢視變且修改screenShow顯示區的css
     let screenNumLen = screenShow.textContent.split(",").join("").length;
-    if (screenNumLen > 6 && screenNumLen <= 9) {
+    if (screenNumLen > 5 && screenNumLen <= 9) {
         document.getElementById("screenShow").style = "font-size:60px;";
     } else if (screenNumLen == 10) {
         newStr = document
@@ -207,7 +207,7 @@ percent.addEventListener("click", () => {
     cacheStringNum = null;
     cacheOperator = null;
     let screenNumLen = screenShow.textContent.split(",").join("").length;
-    if (screenNumLen > 6 && screenNumLen < 9) {
+    if (screenNumLen > 5 && screenNumLen < 9) {
         document.getElementById("screenShow").style = "font-size:60px;";
     } else {
         document.getElementById("screenShow").style = "font-size:100px;";
@@ -265,3 +265,25 @@ equal.addEventListener("click", () => {
     document.getElementById('multiplication').style = "color: white;background: #f1a33c;"
     document.getElementById('division').style = "color: white;background: #f1a33c;"
 });
+
+
+// 點擊icon跳轉
+const githubIcon = document.querySelector('#github');
+githubIcon.addEventListener('click',()=>{
+    window.open('https://github.com/Michael-Yan-wun')
+})
+
+const gitbookIcon = document.querySelector('#gitbook');
+gitbookIcon.addEventListener('click',()=>{
+    window.open('https://app.gitbook.com/@yanwun1214/s/tensorflow2-0/')
+})
+
+const facebookIcon = document.querySelector('#facebook');
+facebookIcon.addEventListener('click',()=>{
+    window.open('https://www.facebook.com/profile.php?id=100001081552642')
+})
+
+const instagramIcon = document.querySelector('#instagram');
+instagramIcon.addEventListener('click',()=>{
+    window.open('https://www.instagram.com/yan_wun/')
+})

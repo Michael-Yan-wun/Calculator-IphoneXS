@@ -17,13 +17,93 @@ body {
 }
 
 p {
-    /* font-weight: 30; */
     font-size: 130px;
     font-family: cursive;
 }
 span {
     color: white;
+    font-weight: 300;
 }
+/* icon css */
+/* github */
+.button.github {
+    background-image: url("./image/github.jpg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.button.github:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+/* gitbook */
+.button.gitbook {
+    background-image: url("./image/gitbook.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    left: 150px;
+    width: 70px;
+    height: 70px;
+}
+
+.button.gitbook:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* facebook */
+.button.facebook {
+    background-image: url("./image/facebook.jpg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    left: 270px;
+    width: 70px;
+    height: 70px;
+}
+
+.button.facebook:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* instagram */
+.button.instagram {
+    background-image: url("./image/instagram.svg");
+    background-color: rgb(221, 216, 216);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    bottom: 0px;
+    left: 390px;
+    width: 70px;
+    height: 70px;
+}
+
+.button.instagram:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+
+
+
 
 .calculator {
     /* 加入posision因為底部的一槓 */
@@ -83,7 +163,6 @@ span {
     align-items: center;
     /* 滑鼠移過去的樣式 */
     cursor: pointer;
-    /*  */
     transition: filter 0.3s;
 }
 
