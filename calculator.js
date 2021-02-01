@@ -269,7 +269,18 @@ division.addEventListener("click", () => {
 // 監聽"="
 equal.addEventListener("click", () => {
     if (cacheStringNum) {
-        const newValueStr = getResultString();
+        let newValueStr = getResultString();
+        // 按下等於後的數字切割
+        if (newValueStr.length > 9) {
+            newValueStr = newValueStr.substring(0, 9);
+        }
+        console.log(newValueStr);
+        // 按下等於後的css調整
+        if (newValueStr.length > 5 && newValueStr.length < 9) {
+            document.getElementById("screenShow").style = "font-size:60px;";
+        } else {
+            document.getElementById("screenShow").style = "font-size:100px;";
+        }
         setStrAsValue(newValueStr);
         cacheStringNum = null;
         cacheOperator = null;
@@ -304,4 +315,3 @@ const instagramIcon = document.querySelector("#instagram");
 instagramIcon.addEventListener("click", () => {
     window.open("https://www.instagram.com/yan_wun/");
 });
-
