@@ -17,13 +17,68 @@ body {
 }
 
 p {
+    position:inherit;
+    margin-bottom: 250px;
     font-size: 130px;
     font-family: cursive;
 }
+
 span {
     color: white;
     font-weight: 300;
 }
+
+#followText{
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    font-family: cursive;
+    position: absolute;
+    bottom: 150px;
+    left: 175px;
+    z-index: 1;
+    animation-name: followText;
+    animation-duration: 4s;
+}
+@keyframes followText{
+    from{
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(-500px, 0px, 0px);
+    }
+    to{
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+/* follow css */
+.button.follow {
+    background-color: wheat;
+    border-radius: 10px 10px 10px 20px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 120px;
+    left: 160px;
+    width: 300px;
+    height: 70px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 51% 85%, 50% 85%, 21% 85%, 0 85%);
+    z-index: 0;
+    animation-name: follow;
+    animation-duration: 4s;
+}
+.button.follow:active{
+    filter: none;
+}
+
+@keyframes follow{
+    from{
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(-500px, 0px, 0px);
+    }
+    to{
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+
 /* icon css */
 /* github */
 .button.github {
@@ -32,9 +87,20 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0px;
-    left: 30px;
+    left: 200px;
     width: 70px;
     height: 70px;
+    /* 動畫 */
+    animation-name: github;
+    animation-duration: 5s;
+}
+@keyframes github {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 200px;
+    }
 }
 
 .button.github:hover {
@@ -50,9 +116,20 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0px;
-    left: 150px;
+    left: 320px;
     width: 70px;
     height: 70px;
+    /* 動畫 */
+    animation-name: gitbook;
+    animation-duration: 5s;
+}
+@keyframes gitbook {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 320px;
+    }
 }
 
 .button.gitbook:hover {
@@ -69,9 +146,20 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0px;
-    left: 270px;
+    left: 440px;
     width: 70px;
     height: 70px;
+    /* 動畫 */
+    animation-name: facebook;
+    animation-duration: 5s;
+}
+@keyframes facebook {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 440px;
+    }
 }
 
 .button.facebook:hover {
@@ -90,9 +178,20 @@ span {
     background-size: cover;
     background-position: center;
     bottom: 0px;
-    left: 390px;
+    left: 560px;
     width: 70px;
     height: 70px;
+    animation-name: instagram;
+    animation-duration: 5s;
+}
+
+@keyframes instagram {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 560px;
+    }
 }
 
 .button.instagram:hover {
@@ -102,8 +201,33 @@ span {
         0 0 30px 0px rgba(0, 0, 0, 0.7);
 }
 
+/* myself */
+.button.myself {
+    background-image: url("./image/myself.jpeg");
+    background-color: rgb(221, 216, 216);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    bottom: 0px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+    animation-name: myself;
+    animation-duration: 5s;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+    border: 5px solid rgb(221, 216, 216);
+}
 
-
+@keyframes myself {
+    from {
+        transform: rotate3d(0, 0, 1, -100deg) translate3d(-300px, 0px, 0px);
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
 
 .calculator {
     /* 加入posision因為底部的一槓 */
@@ -120,6 +244,19 @@ span {
     /* 整體縮放 */
     transform: scale(0.9);
     -webkit-transform: scale(0.9);
+
+    /* 動畫設定 */
+    animation-name: myCal;
+    animation-duration: 5s;
+}
+
+@keyframes myCal {
+    from {
+        transform: rotate3d(0, 0, 1, -100deg) translate3d(-300px, -100px, -150px);
+    }
+    to {
+        transform: scale(0.9) rotate3d(0, 0, 1, 0deg) translate3d(0px, 0px, 0px);
+    }
 }
 
 .top-container {

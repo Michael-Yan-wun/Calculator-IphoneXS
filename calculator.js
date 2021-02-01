@@ -1,5 +1,5 @@
-// 每一分鐘更新一次時間
-window.setInterval("getNowTime()", 10000);
+// 動畫完成時同時完成更新時間
+window.setInterval("getNowTime()", 3000);
 
 //Get Now-Time
 function getNowTime() {
@@ -184,10 +184,13 @@ ac.addEventListener("click", () => {
     // 調整screen css
     document.getElementById("screenShow").style = "font-size:100px;";
     // 調整按鈕css
-    document.getElementById('plus').style =  "color: white;background: #f1a33c;"
-    document.getElementById('minus').style = "color: white;background: #f1a33c;"
-    document.getElementById('multiplication').style = "color: white;background: #f1a33c;"
-    document.getElementById('division').style = "color: white;background: #f1a33c;"
+    document.getElementById("plus").style = "color: white;background: #f1a33c;";
+    document.getElementById("minus").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("multiplication").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("division").style =
+        "color: white;background: #f1a33c;";
 });
 
 // 監聽+/- 按鈕
@@ -217,38 +220,50 @@ percent.addEventListener("click", () => {
 // 監聽四則運算按鈕
 plus.addEventListener("click", () => {
     handleOperationClick("plus");
-     // 調整按鈕css
-    document.getElementById('plus').style = "color: #f1a33c;background: white;"
-    document.getElementById('minus').style = "color: white;background: #f1a33c;"
-    document.getElementById('multiplication').style = "color: white;background: #f1a33c;"
-    document.getElementById('division').style = "color: white;background: #f1a33c;"
+    // 調整按鈕css
+    document.getElementById("plus").style = "color: #f1a33c;background: white;";
+    document.getElementById("minus").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("multiplication").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("division").style =
+        "color: white;background: #f1a33c;";
 });
 
 minus.addEventListener("click", () => {
     handleOperationClick("minus");
-     // 調整按鈕css
-    document.getElementById('plus').style =  "color: white;background: #f1a33c;"
-    document.getElementById('minus').style = "color: #f1a33c;background: white;"
-    document.getElementById('multiplication').style = "color: white;background: #f1a33c;"
-    document.getElementById('division').style = "color: white;background: #f1a33c;"
+    // 調整按鈕css
+    document.getElementById("plus").style = "color: white;background: #f1a33c;";
+    document.getElementById("minus").style =
+        "color: #f1a33c;background: white;";
+    document.getElementById("multiplication").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("division").style =
+        "color: white;background: #f1a33c;";
 });
 
 multiplication.addEventListener("click", () => {
     handleOperationClick("multiplication");
-     // 調整按鈕css
-    document.getElementById('plus').style =  "color: white;background: #f1a33c;"
-    document.getElementById('minus').style = "color: white;background: #f1a33c;"
-    document.getElementById('multiplication').style = "color: #f1a33c;background: white;"
-    document.getElementById('division').style = "color: white;background: #f1a33c;"
+    // 調整按鈕css
+    document.getElementById("plus").style = "color: white;background: #f1a33c;";
+    document.getElementById("minus").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("multiplication").style =
+        "color: #f1a33c;background: white;";
+    document.getElementById("division").style =
+        "color: white;background: #f1a33c;";
 });
 
 division.addEventListener("click", () => {
     handleOperationClick("division");
-     // 調整按鈕css
-    document.getElementById('plus').style =  "color: white;background: #f1a33c;"
-    document.getElementById('minus').style = "color: white;background: #f1a33c;"
-    document.getElementById('multiplication').style = "color: white;background: #f1a33c;"
-    document.getElementById('division').style = "color: #f1a33c;background: white;"
+    // 調整按鈕css
+    document.getElementById("plus").style = "color: white;background: #f1a33c;";
+    document.getElementById("minus").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("multiplication").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("division").style =
+        "color: #f1a33c;background: white;";
 });
 
 // 監聽"="
@@ -260,30 +275,33 @@ equal.addEventListener("click", () => {
         cacheOperator = null;
     }
     // 調整按鈕css
-    document.getElementById('plus').style =  "color: white;background: #f1a33c;"
-    document.getElementById('minus').style = "color: white;background: #f1a33c;"
-    document.getElementById('multiplication').style = "color: white;background: #f1a33c;"
-    document.getElementById('division').style = "color: white;background: #f1a33c;"
+    document.getElementById("plus").style = "color: white;background: #f1a33c;";
+    document.getElementById("minus").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("multiplication").style =
+        "color: white;background: #f1a33c;";
+    document.getElementById("division").style =
+        "color: white;background: #f1a33c;";
 });
 
-
 // 點擊icon跳轉
-const githubIcon = document.querySelector('#github');
-githubIcon.addEventListener('click',()=>{
-    window.open('https://github.com/Michael-Yan-wun')
-})
+const githubIcon = document.querySelector("#github");
+githubIcon.addEventListener("click", () => {
+    window.open("https://github.com/Michael-Yan-wun");
+});
 
-const gitbookIcon = document.querySelector('#gitbook');
-gitbookIcon.addEventListener('click',()=>{
-    window.open('https://app.gitbook.com/@yanwun1214/s/tensorflow2-0/')
-})
+const gitbookIcon = document.querySelector("#gitbook");
+gitbookIcon.addEventListener("click", () => {
+    window.open("https://app.gitbook.com/@yanwun1214/s/tensorflow2-0/");
+});
 
-const facebookIcon = document.querySelector('#facebook');
-facebookIcon.addEventListener('click',()=>{
-    window.open('https://www.facebook.com/profile.php?id=100001081552642')
-})
+const facebookIcon = document.querySelector("#facebook");
+facebookIcon.addEventListener("click", () => {
+    window.open("https://www.facebook.com/profile.php?id=100001081552642");
+});
 
-const instagramIcon = document.querySelector('#instagram');
-instagramIcon.addEventListener('click',()=>{
-    window.open('https://www.instagram.com/yan_wun/')
-})
+const instagramIcon = document.querySelector("#instagram");
+instagramIcon.addEventListener("click", () => {
+    window.open("https://www.instagram.com/yan_wun/");
+});
+
