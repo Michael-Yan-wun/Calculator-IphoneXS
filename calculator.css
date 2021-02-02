@@ -17,7 +17,7 @@ body {
 }
 
 p {
-    position:inherit;
+    position: inherit;
     margin-bottom: 250px;
     font-size: 130px;
     font-family: cursive;
@@ -28,7 +28,35 @@ span {
     font-weight: 300;
 }
 
-#followText{
+h4 {
+    width: 18em;
+    border-right: 0.05em solid;
+    overflow: hidden;
+    /* visibility: hidden; */
+    white-space: nowrap;
+    /* typing打字機效果，blink-caret游標閃爍 */
+    animation: typing 6s steps(30, end), blink-caret 1s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 18em;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: currentColor;
+    }
+}
+
+#followText {
     font-size: 17px;
     font-weight: 300;
     color: black;
@@ -40,11 +68,11 @@ span {
     animation-name: followText;
     animation-duration: 4s;
 }
-@keyframes followText{
-    from{
+@keyframes followText {
+    from {
         transform: rotate3d(1, 0, 0, 0deg) translate3d(-500px, 0px, 0px);
     }
-    to{
+    to {
         transform: rotate3d(1, 0, 0, 0deg) translate3d(0px, 0px, 0px);
     }
 }
@@ -58,26 +86,33 @@ span {
     background-size: cover;
     bottom: 120px;
     left: 160px;
-    width: 300px;
+    width: 330px;
     height: 70px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 51% 85%, 50% 85%, 21% 85%, 0 85%);
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 85%,
+        51% 85%,
+        50% 85%,
+        21% 85%,
+        0 85%
+    );
     z-index: 0;
     animation-name: follow;
     animation-duration: 4s;
 }
-.button.follow:active{
+.button.follow:active {
     filter: none;
 }
 
-@keyframes follow{
-    from{
+@keyframes follow {
+    from {
         transform: rotate3d(1, 0, 0, 0deg) translate3d(-500px, 0px, 0px);
     }
-    to{
+    to {
         transform: rotate3d(1, 0, 0, 0deg) translate3d(0px, 0px, 0px);
     }
 }
-
 
 /* icon css */
 /* github */
@@ -252,7 +287,8 @@ span {
 
 @keyframes myCal {
     from {
-        transform: rotate3d(0, 0, 1, -100deg) translate3d(-300px, -100px, -150px);
+        transform: rotate3d(0, 0, 1, -100deg)
+            translate3d(-300px, -100px, -150px);
     }
     to {
         transform: scale(0.9) rotate3d(0, 0, 1, 0deg) translate3d(0px, 0px, 0px);
